@@ -75,8 +75,9 @@ ol {
 
 
 .content__list-container {
-    max-height: 400px;
+    max-height: 298px;
     overflow-y: auto; 
+    overflow-x: hidden;
 }
 
 .content__details {
@@ -110,8 +111,9 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  width: 100px; 
-  height: 56px; 
+  object-fit: cover;
+  width: 194px;
+  height: 103px; 
   flex-shrink: 0; 
 }
 
@@ -129,6 +131,7 @@ ol {
 }
 
 .title {
+  font-family: Oswald;
   font-size: 75px;
   font-weight: 700;
   line-height: 94%;
@@ -148,8 +151,16 @@ ol {
   color: #c4c4c4; 
 }
 
+.content__video-card-description-container{
+width: 165px;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
 .content__video-card-title {
   font-size: 30px;
+  text-transform: uppercase;
+  font-family: Oswald;
   font-weight: 700;
 }
 
@@ -183,15 +194,23 @@ ol {
 
 .search-form__label {
   display: flex;
-  gap: 1.5px;
+  gap: 5px;
   align-items: center;
   width: fit-content;
   position: relative;
 }
 
+[type=checkbox]:checked + span:before {
+  content: '';
+  background-color: white;
+  width: 19px;
+  height: 19px;
+}
+
 .search-form__textfield{
   background-color: transparent;
   color: #FFFFFFB2;
+  font-family: 'Fira Sans Condensed';
   border-left: none;
   border-right: none;
   width: 225px;
@@ -209,8 +228,8 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  width: 16px;
-  height: 16px;
+  width: 19px;
+  height: 19px;
   border: 2px solid white;
   display: flex;
   align-items: center;
@@ -227,22 +246,19 @@ ol {
   position: absolute;
 }
 
-.search-form__label:hover {
-  text-decoration: underline;
-}
-
 input[type="checkbox"]:checked{
   background-color: white;
 }
 
 .button {
+  font-family: 'Fira Sans Condensed';
   border: 2px solid white;
   background-color: transparent;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 700;
   padding: 6px 0;
   cursor: pointer;
-  text-transform: uppercase;
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -317,15 +333,3 @@ button,
   position: relative;
 }
 
-.result__video-container .preloader,
-.content__list-container .preloader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-}

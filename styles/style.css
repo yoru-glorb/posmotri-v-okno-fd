@@ -50,33 +50,34 @@ ol {
 }
 
 .page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    align-items: end; 
-    column-gap: 30px; 
-    width: 1140px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: end;
+  column-gap: 30px;
+  width: 1140px;
 }
 
 
 .search-form {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 40px; 
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 40px;
 }
 
 
 .content__list-container {
-    max-height: 400px;
-    overflow-y: auto; 
+  max-height: 298px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .content__details {
@@ -86,8 +87,8 @@ ol {
 
 .result__video-container {
   width: 711px;
-  height: 386px; 
-  margin-bottom: 20px; 
+  height: 386px;
+  margin-bottom: 20px;
 }
 
 .result__video {
@@ -99,7 +100,7 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .content__video-card {
@@ -110,16 +111,17 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  width: 100px; 
-  height: 56px; 
-  flex-shrink: 0; 
+  object-fit: cover;
+  width: 194px;
+  height: 103px;
+  flex-shrink: 0;
 }
 
 .content__video-card-thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  object-position: center; 
+  object-fit: cover;
+  object-position: center;
 }
 
 .search-form__fieldset-title {
@@ -129,6 +131,7 @@ ol {
 }
 
 .title {
+  font-family: "Oswald",sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 94%;
@@ -136,20 +139,28 @@ ol {
 }
 
 .content__accent {
-  color: #6c6c6c; 
+  color: #6c6c6c;
 }
 
 .content__card-link {
   text-decoration: none;
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 .content__card-link:hover {
-  color: #c4c4c4; 
+  color: #c4c4c4;
+}
+
+.content__video-card-description-container {
+  width: 165px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-title {
   font-size: 30px;
+  text-transform: uppercase;
+  font-family: Oswald;
   font-weight: 700;
 }
 
@@ -183,15 +194,23 @@ ol {
 
 .search-form__label {
   display: flex;
-  gap: 1.5px;
+  gap: 5px;
   align-items: center;
   width: fit-content;
   position: relative;
 }
 
-.search-form__textfield{
+[type=checkbox]:checked+span:before {
+  content: '';
+  background-color: white;
+  width: 19px;
+  height: 19px;
+}
+
+.search-form__textfield {
   background-color: transparent;
   color: #FFFFFFB2;
+  font-family: 'Fira Sans Condensed';
   border-left: none;
   border-right: none;
   width: 225px;
@@ -209,8 +228,8 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  width: 16px;
-  height: 16px;
+  width: 19px;
+  height: 19px;
   border: 2px solid white;
   display: flex;
   align-items: center;
@@ -219,7 +238,7 @@ ol {
   position: relative;
 }
 
-.search-formcheckbox:checked + .search-formpseudo-checkbox::after {
+.search-formcheckbox:checked+.search-formpseudo-checkbox::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -227,22 +246,19 @@ ol {
   position: absolute;
 }
 
-.search-form__label:hover {
-  text-decoration: underline;
-}
-
-input[type="checkbox"]:checked{
+input[type="checkbox"]:checked {
   background-color: white;
 }
 
 .button {
+  font-family: 'Fira Sans Condensed';
   border: 2px solid white;
   background-color: transparent;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 700;
   padding: 6px 0;
   cursor: pointer;
-  text-transform: uppercase;
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -315,17 +331,4 @@ button,
 .result__video-container,
 .content__list-container {
   position: relative;
-}
-
-.result__video-container .preloader,
-.content__list-container .preloader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
 }

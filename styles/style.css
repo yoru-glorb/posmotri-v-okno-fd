@@ -75,16 +75,9 @@ ol {
 
 
 .content__list-container {
-<<<<<<< HEAD
-  margin-top: 26px;
-    max-height: 298px;
-    overflow-y: auto; 
-    overflow-x: hidden;
-=======
   max-height: 298px;
   overflow-y: auto;
   overflow-x: hidden;
->>>>>>> 86e4d7bbfc69893c34da6c227e2567efe317f802
 }
 
 .content__details {
@@ -107,12 +100,8 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
-  gap: 10px; 
-  margin-bottom: 30px;
-=======
   gap: 10px;
->>>>>>> 86e4d7bbfc69893c34da6c227e2567efe317f802
+  padding-bottom: 30px;
 }
 
 .content__video-card {
@@ -125,13 +114,8 @@ ol {
 .content__video-card-thumbnail {
   object-fit: cover;
   width: 194px;
-<<<<<<< HEAD
   height: 103px; 
   flex-shrink: 0; 
-=======
-  height: 103px;
-  flex-shrink: 0;
->>>>>>> 86e4d7bbfc69893c34da6c227e2567efe317f802
 }
 
 .content__video-card-thumbnail img {
@@ -148,15 +132,12 @@ ol {
 }
 
 .title {
-<<<<<<< HEAD
-  font-family: Oswald;
-=======
   font-family: "Oswald",sans-serif;
->>>>>>> 86e4d7bbfc69893c34da6c227e2567efe317f802
   font-size: 75px;
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
+  padding-bottom: 26px;
 }
 
 .content__accent {
@@ -230,26 +211,14 @@ text-overflow: ellipsis;
   position: relative;
 }
 
-<<<<<<< HEAD
-[type=checkbox]:checked + span:before {
-=======
 [type=checkbox]:checked+span:before {
->>>>>>> 86e4d7bbfc69893c34da6c227e2567efe317f802
   content: '';
   background-color: white;
   width: 19px;
   height: 19px;
 }
 
-<<<<<<< HEAD
-
-.search-form__textfield{
-border-style: solid;
-border-color: rgba(255, 255, 255, 1);
-border-width: 1px;
-=======
 .search-form__textfield {
->>>>>>> 86e4d7bbfc69893c34da6c227e2567efe317f802
   background-color: transparent;
   color: #FFFFFFB2;
   font-family: 'Fira Sans Condensed';
@@ -288,11 +257,7 @@ border-width: 1px;
   position: absolute;
 }
 
-<<<<<<< HEAD
-input[type="checkbox"]:checked{
-=======
 input[type="checkbox"]:checked {
->>>>>>> 86e4d7bbfc69893c34da6c227e2567efe317f802
   background-color: white;
 }
 
@@ -376,9 +341,4 @@ button,
 .result__video-container,
 .content__list-container {
   position: relative;
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> 86e4d7bbfc69893c34da6c227e2567efe317f802

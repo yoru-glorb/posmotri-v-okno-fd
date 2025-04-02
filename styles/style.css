@@ -219,6 +219,8 @@ text-overflow: ellipsis;
 }
 
 .search-form__textfield {
+  border-style: solid;
+border-color: #FFFFFF;
   background-color: transparent;
   color: #FFFFFFB2;
   font-family: 'Fira Sans Condensed';
